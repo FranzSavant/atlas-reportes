@@ -39,3 +39,10 @@ footer{margin-top:44px;color:var(--tx2);font-size:12px;border-top:1px solid var(
 .punto.rojo{background:#ff6b6b}
 .leyenda .hueco{margin-left:auto;border-left:1px solid var(--line);padding-left:16px}
 .nota{color:var(--tx2);font-size:12.5px;margin:6px 0 0}
+.chartbox{position:relative}
+.tip{position:absolute;top:4px;pointer-events:none;background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:7px 9px;font-size:12px;line-height:1.45;box-shadow:0 6px 18px rgba(0,0,0,.28);white-space:nowrap;z-index:3}
+.tip .h{color:var(--tx2);margin-bottom:3px;font-variant-numeric:tabular-nums}
+.tip .f{display:flex;gap:12px;justify-content:space-between;font-variant-numeric:tabular-nums}
+.tip .f b{font-weight:600}
+.tip .v{color:var(--verde)}.tip .r{color:#ff6b6b}
+.tip .c{margin-top:3px;padding-top:3px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
