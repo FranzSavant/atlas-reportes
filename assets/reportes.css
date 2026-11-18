@@ -32,3 +32,10 @@ tbody tr:hover{background:var(--panel2)}
 .pos{color:var(--verde)}.neg{color:#ff6b6b}
 footer{margin-top:44px;color:var(--tx2);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
 .aviso{background:var(--panel2);border-left:3px solid var(--azul);padding:10px 12px;border-radius:6px;font-size:13px;color:var(--tx2);margin-top:14px}
+.leyenda{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--tx2);margin-bottom:8px}
+.leyenda b{color:var(--tx);font-variant-numeric:tabular-nums}
+.punto{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.punto.verde{background:#3ddc84}
+.punto.rojo{background:#ff6b6b}
+.leyenda .hueco{margin-left:auto;border-left:1px solid var(--line);padding-left:16px}
+.nota{color:var(--tx2);font-size:12.5px;margin:6px 0 0}
