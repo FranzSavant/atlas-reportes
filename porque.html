@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0c0e">
+<title>Por qué hago esto · InDrive</title>
+<style>
+  :root{
+    --bg:#0b0c0e; --ink:#f3f2ef; --muted:#8d8d94; --line:#1e2024;
+    --ok:#38c976; --bad:#ff5c52; --warn:#f0b544;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:0 22px}
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:none}
+  .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:650;margin:0 0 14px}
+  h1{font-size:clamp(30px,8vw,42px);line-height:1.12;letter-spacing:-.03em;font-weight:760;margin:0 0 16px}
+  h2{font-size:clamp(23px,6vw,31px);line-height:1.18;letter-spacing:-.025em;font-weight:730;margin:0 0 14px}
+  p{font-size:16.5px;margin:0 0 14px;color:#dcdbd7}
+  p.lead{font-size:18px;color:var(--ink)}
+  strong{color:#fff;font-weight:680}
+  .hero{padding-top:64px;padding-bottom:64px}
+  .hero .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:650;margin:0 0 18px}
+  .nums{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 6px}
+  .n{border:1px solid var(--line);border-radius:14px;padding:15px 16px;background:#111316}
+  .n .k{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:650}
+  .n .v{font-size:29px;font-weight:760;letter-spacing:-.035em;line-height:1.1;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+  .n .s{font-size:11.5px;color:var(--muted)}
+  .neg{color:var(--bad)} .pos{color:var(--ok)}
+  .punch{font-size:clamp(21px,5.4vw,27px);line-height:1.28;letter-spacing:-.02em;font-weight:730;margin:26px 0 0;color:#fff}
+  .punch em{font-style:normal;color:var(--ok)}
+  .ladder{margin:18px 0 0;padding:0;list-style:none}
+  .ladder li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+  .ladder li:last-child{border-bottom:none}
+  .ladder .amt{font-variant-numeric:tabular-nums;font-weight:730;color:var(--ok);font-size:17px}
+  .ladder .tot{border-top:1px solid #333;margin-top:4px;padding-top:14px;font-weight:730}
+  .why{background:#111316;border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0 0}
+  .why .lbl{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:650;margin-bottom:8px}
+  .why .ed{min-height:70px;outline:none;font-size:16.5px;color:#fff;border-bottom:1px dashed #2c2f34;padding-bottom:6px}
+  .why .ed:empty::before{content:"Escribí acá tu razón, en tus palabras. Se guarda en este teléfono.";color:#5e6068}
+  .q{margin:0;padding:0;list-style:none;counter-reset:q}
+  .q li{position:relative;padding:14px 0 14px 40px;border-bottom:1px solid var(--line);font-size:16px}
+  .q li:last-child{border-bottom:none}
+  .q li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:13px;width:26px;height:26px;border-radius:50%;background:#1b1e22;color:var(--muted);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .q b{color:#fff}
+  .cta{display:inline-block;margin-top:22px;padding:14px 20px;border-radius:11px;border:1px solid #2c3036;color:var(--ink);text-decoration:none;font-size:15px;font-weight:650;background:#141619}
+  .cta:active{background:#1c1f23}
+  .close{font-size:clamp(22px,6vw,30px);line-height:1.25;letter-spacing:-.025em;font-weight:740;color:#fff;margin:0}
+  .close span{color:var(--ok)}
+  footer{padding:30px 0 56px;color:#5e6068;font-size:11.5px;line-height:1.7}
+  footer a{color:#7f828a}
+  .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ok);margin-right:7px;vertical-align:1px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <p class="kicker">Victor · InDrive · para cuando quieras irte a casa</p>
+  <h1>Hoy no te falta motivación.<br>Te falta perspectiva.</h1>
+  <p class="lead">Esta página es un espejo, no un discurso. Tiene tus números reales y una sola pregunta: <strong>¿realmente voy a salir a flote?</strong></p>
+</section>
+
+<section>
+  <p class="eyebrow">La respuesta corta</p>
+  <h2>Sí. Pero no por aguantar.</h2>
+  <p class="lead">Por <strong>margen</strong>. Tu negocio no está roto ni te está hundiendo: está calibrado al milímetro, y el milímetro lo movés vos.</p>
+  <p>Este es el mes, con los datos de tus propias jornadas:</p>
+  <div class="nums">
+    <div class="n"><div class="k">Necesitás</div><div class="v">703</div><div class="s">gastos fijos</div></div>
+    <div class="n"><div class="k">Levantás hoy</div><div class="v">646</div><div class="s">26 días, sin bono</div></div>
+    <div class="n"><div class="k">El hueco</div><div class="v neg">−57</div><div class="s">al mes</div></div>
+    <div class="n"><div class="k">Con el bono</div><div class="v pos">+55</div><div class="s">y ya cubre</div></div>
+  </div>
+  <p class="punch">No estás quebrado. Estás a <em>57 dólares</em>.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Cuando querés irte temprano</p>
+  <h2>Irse a casa tampoco es gratis.</h2>
+  <p>Un día que no trabajás son <strong>unos $25 que no entran</strong>. Y los 703 no se mueven: la cuota del carro corre igual el domingo que el martes.</p>
+  <p>Y hay una cosa que se pierde sin hacer ruido: el bono es <strong>semanal y escalonado</strong>. Si la semana se queda corta, no solo perdés ese día — perdés el bono, y la semana siguiente pagás la comisión completa.</p>
+  <p class="punch">Irte temprano no te devuelve el tiempo.<br>Te cuesta la semana.</p>
+</section>
+
+<section>
+  <p class="eyebrow">No es suerte</p>
+  <h2>Mismo carro, misma ciudad, $23 de diferencia.</h2>
+  <p>Tu mejor día dejó <strong>$39.45</strong>. El peor, <strong>$15.90</strong>. No cambió el clima ni la demanda: cambió la <strong>mezcla de viajes</strong>.</p>
+  <p>Si esa diferencia se repite 26 días, son <strong>$612 al mes</strong>. Eso no es el destino. Es una decisión que tomás cada vez que aceptás una oferta.</p>
+  <p class="punch">No estás a merced del día.<br>Estás eligiendo el día.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Lo que ya sabés hacer</p>
+  <h2>No te falta habilidad. Te falta repetir.</h2>
+  <p>El 25 de noviembre hiciste <strong>17 solicitudes cortas</strong> y sacaste <strong>$0.54 por kilómetro</strong>: tu mejor día en porcentaje de plan. Y tu tablero marcó <strong>25.5 MPG</strong> una vez, así que sabés manejar para gastar menos.</p>
+  <p>Las dos cosas ya salieron. No hay que inventar nada nuevo: hay que volver a hacer lo que ya funcionó.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Las tres palancas</p>
+  <h2>+$227 al mes. Sin un día más.</h2>
+  <ul class="ladder">
+    <li><span>Manejar a 25.5 MPG</span><span class="amt">+52</span></li>
+    <li><span>Llegar al bono de la semana</span><span class="amt">+64</span></li>
+    <li><span>Priorizar viajes cortos</span><span class="amt">+111</span></li>
+    <li class="tot"><span>Total</span><span class="amt">+227</span></li>
+  </ul>
+  <p style="margin-top:20px">Ninguna de las tres es trabajar más horas. Las tres dependen de decisiones que tomás dentro del carro.</p>
+</section>
+
+<section>
+  <p class="eyebrow">La razón</p>
+  <h2>Esto no es por los $42.</h2>
+  <p>Es por los <strong>703 que no se mueven</strong>. Es por el carro que te los sostiene. Es por tener un negocio que un día te deje respirar en vez de solo cubrir.</p>
+  <p>Yo no puedo escribir tu razón: no me la has dicho. Escribila vos. Vas a volver a esta página cansado, y en ese momento tus palabras valen más que las mías.</p>
+  <div class="why">
+    <div class="lbl">Mi razón, en mis palabras</div>
+    <div class="ed" id="razon" contenteditable="true" spellcheck="false"></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Los 90 segundos</p>
+  <h2>Si igual te querés ir, hacé esto primero.</h2>
+  <ul class="q">
+    <li><b>¿Cuántas solicitudes llevo?</b> Si me faltan 1 a 3 para el siguiente tier, hago esas y me voy. Esas valen $5 cada una.</li>
+    <li><b>¿Cuál fue mi último $/km?</b> Si está bajo $0.50, cambié la mezcla: acepté viajes largos. Se corrige con el próximo.</li>
+    <li><b>¿Mandé las 3 fotos?</b> Captura de InDrive, TRIP A y MPG, juntas y como archivo. Un día sin foto no existe en mis cuentas.</li>
+  </ul>
+  <p class="punch">Vete con el día cerrado,<br>no con el día a medias.</p>
+  <a class="cta" href="metas.html">Abrir la tarjeta del turno →</a>
+</section>
+
+<section>
+  <p class="close">No estás a cuatro kilómetros de la orilla.<br>Estás a <span>cuarenta metros</span>.<br><br>La diferencia es que cuarenta metros se nadan cansado.</p>
+</section>
+
+<footer>
+  <span class="dot"></span>Datos: 8 jornadas registradas · bruto $43.42 · 106.6 km · 7.13 h · MPG 22.0 · Regular $4.80/gal · mantenimiento $0.039/km · bono semanal con techo en la comisión.<br>
+  Todo en USD y km · hora de El Salvador (GMT−6) · Actualizado 27 de noviembre de 2026.<br>
+  <a href="./">Ver los reportes</a>
+</footer>
+
+</div>
+<script>
+  (function(){
+    var el = document.getElementById('razon');
+    if(!el) return;
+    try { el.textContent = localStorage.getItem('indrive-razon') || ''; } catch(e){}
+    el.addEventListener('input', function(){
+      try { localStorage.setItem('indrive-razon', el.textContent); } catch(e){}
+    });
+  })();
+</script>
+</body>
+</html>
